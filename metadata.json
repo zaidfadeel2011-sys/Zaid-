@@ -1,0 +1,8 @@
+{
+  "name": "الموقع الاسلامي الذكي",
+  "description": "تطبيق إسلامي شامل يتضمن تتبع الصلوات، الأذكار، القرآن الكريم، ومساعد فتوى ذكي مدعوم بـ Gemini AI.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}
