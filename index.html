@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zikr - الورد اليومي</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;400;700;900&family=Noto+Naskh+Arabic:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;400;700;900&family=Noto+Naskh+Arabic:wght@400;700&family=Amiri:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #D4AF37;
             --gold-light: #F1E5AC;
+            --gold-dark: #AA8A2E;
             --primary: var(--gold);
             --bg-base: #fafafa;
-            --text-main: #1a1a1a;
-            --glass-bg: rgba(255, 255, 255, 0.8);
-            --border-color: rgba(212, 175, 55, 0.2);
+            --text-main: #000000;
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --border-color: rgba(212, 175, 55, 0.3);
         }
 
         body {
@@ -25,6 +26,12 @@
             margin: 0;
             padding: 0;
             transition: all 0.5s ease;
+        }
+
+        .zikr-logo-font {
+            font-family: 'Amiri', serif;
+            font-weight: 900;
+            letter-spacing: -0.05em;
         }
 
         .quran-font {
@@ -39,7 +46,7 @@
         }
 
         .gold-card {
-            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8A2E 100%);
             color: #000000;
         }
 
@@ -48,7 +55,7 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
 
         .active-tab-glow {
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
         
         .animate-in {
@@ -70,10 +77,8 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body>
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
 </body>
 </html>
