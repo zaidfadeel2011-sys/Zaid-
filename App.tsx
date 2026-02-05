@@ -1,20 +1,20 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { Page, UserData, PrayerTimings, CustomRecitation } from './types';
-import Header from './components/Header';
-import BottomNav from './components/BottomNav';
-import Home from './components/Home';
-import FatwaAssistant from './components/FatwaAssistant';
-import PrayerTracker from './components/PrayerTracker';
-import QuranReader, { SURAH_INDEX } from './components/QuranReader';
-import Azkar from './components/Azkar';
-import Settings from './components/Settings';
-import Minbar from './components/Minbar';
-import Recitations from './components/Recitations';
-import VoiceAssistant from './components/VoiceAssistant';
-import { calculateLocalPrayers } from './services/prayerService';
+import { Page, UserData, PrayerTimings, CustomRecitation } from './types.ts';
+import Header from './components/Header.tsx';
+import BottomNav from './components/BottomNav.tsx';
+import Home from './components/Home.tsx';
+import FatwaAssistant from './components/FatwaAssistant.tsx';
+import PrayerTracker from './components/PrayerTracker.tsx';
+import QuranReader, { SURAH_INDEX } from './components/QuranReader.tsx';
+import Azkar from './components/Azkar.tsx';
+import Settings from './components/Settings.tsx';
+import Minbar from './components/Minbar.tsx';
+import Recitations from './components/Recitations.tsx';
+import VoiceAssistant from './components/VoiceAssistant.tsx';
+import { calculateLocalPrayers } from './services/prayerService.ts';
 
-// مكتبة التلاوات الخاشعة (بناءً على الكود الأصلي فقط)
+// مكتبة التلاوات الخاشعة
 export const RECITATIONS_DATA: Record<string, CustomRecitation[]> = {
   nafees: [
     { id: 1, title: 'سورة الفاتحة', url: 'https://youtu.be/hZwA9D2nDqM' },
@@ -58,7 +58,6 @@ export const RECITATIONS_DATA: Record<string, CustomRecitation[]> = {
   ]
 };
 
-// مكتبة الخطب والمواعظ (بناءً على الكود الأصلي)
 export const SERMONS_DATA: CustomRecitation[] = [
   { id: 1, title: 'التوبة النصوحة', url: 'https://youtu.be/TTlnoFztl6E' },
   { id: 2, title: 'كيف يغير القرآن نفوسنا', url: 'https://youtu.be/AH7kbk9Smdk' },

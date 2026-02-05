@@ -1,12 +1,10 @@
 
 import { GoogleGenAI } from "@google/genai";
-import { Message } from "../types";
+import { Message } from "../types.ts";
 
 export const askFatwa = async (history: Message[]) => {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-  // تحويل تاريخ المحادثة إلى الصيغة المطلوبة لـ Gemini
-  // Gemini يستخدم 'user' و 'model' كأدوار
   const contents = history.map(msg => ({
     role: msg.role === 'user' ? 'user' : 'model',
     parts: [{ text: msg.content }]

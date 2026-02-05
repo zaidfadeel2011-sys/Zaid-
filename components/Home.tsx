@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { UserData, PrayerTimings, Page, PrayerStatus } from '../types';
-import { getNextPrayer } from '../services/prayerService';
+import { UserData, PrayerTimings, Page, PrayerStatus } from '../types.ts';
+import { getNextPrayer } from '../services/prayerService.ts';
 
 interface Props {
   userData: UserData;

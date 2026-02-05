@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { askFatwa } from '../services/geminiService';
-import { Message, UserData } from '../types';
+import { askFatwa } from '../services/geminiService.ts';
+import { Message, UserData } from '../types.ts';
 
 interface Props {
   userData: UserData;
